@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Barang - PT DRM Elektronik</title>
+    <link rel="stylesheet" href="data user.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="assets/images/logo-home.png" alt=" Inventory icon">
+            <h1>PT. DRM ELEKTRONIK</h1>
+        </div>
+        <nav class="nav-menu">
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="logout-text" id="logoutText">Logout</div>
+        </nav>
+    </header>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>Inventory System</h2>
+        <ul class="menu">
+            <li>
+                <a href="dashboard.html">
+                    <img src="assets/images/icon-dashboard.png" alt="Dashboard Icon"> Dashboard
+                </a>
+            </li>
+            <li class="active">
+                <a href="#">
+                    <img src="assets/images/data-user.png" alt="User Icon"> Data User
+                </a>
+            </li>
+            <li>
+                <a href="data customer.html">
+                    <img src="assets/images/icon-customer.png" alt="Customer Icon"> Data Customer
+                </a>
+            </li>
+            <li>
+                <a href="data transaksi.html">
+                    <img src="assets/images/icon-transaksi.png" alt="Transaction Icon"> Transaksi
+                </a>
+            </li>
+            <li >
+                <a href="data barang.html">
+                    <img src="assets/images/icon-barang.png" alt="Product Icon"> Data Barang
+                </a>
+            </li>
+            <li>
+                <a href="laporan akhir.html">
+                    <img src="assets/images/icon-laporan.png" alt="Report Icon"> Laporan Akhir
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+        <h1>Data User</h1>
+
+
+        <button id="btnAdd" class="btn">Tambah</button>
+        <div class="table-controls">
+            <select id="rowSelect">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+            <div class="search-box">
+                <label for="searchInput">Search:</label>
+                <input type="text" id="searchInput" placeholder="Search...">
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                        <th>ID User</th>
+                        <th>Nama</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>No. HP</th>
+                        <th>Password</th>
+                        <th>Aksi</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>NBI197</td>
+                    <td>Dimas Deffandi</td>
+                    <td>dimas123</td>
+                    <td>dimas@gmail.com</td>
+                    <td>0821-2345-6789</td>
+                    <td>password123</td>
+                    <td>
+                        <img src="assets/images/logo-edit.jpg" alt="Edit" class="btn-edit">
+                        <img src="assets/images/logo-hapus.jpg" alt="Delete" class="btn-delete">
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>NBI203</td>
+                    <td>Ali Machfudi</td>
+                    <td>ali789</td>
+                    <td>machfudi@gmail.com</td>
+                    <td>0821-9876-5432</td>
+                    <td>password456</td>
+                    <td>
+                        <img src="assets/images/logo-edit.jpg" alt="Edit" class="btn-edit">
+                        <img src="assets/images/logo-hapus.jpg" alt="Delete" class="btn-delete">
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>NBI205</td>
+                    <td>Dimas Rizal</td>
+                    <td>rizal456</td>
+                    <td>rizal@gmail.com</td>
+                    <td>0851-2345-6789</td>
+                    <td>rizal789</td>
+                    <td>
+                        <img src="assets/images/logo-edit.jpg" alt="Edit" class="btn-edit">
+                        <img src="assets/images/logo-hapus.jpg" alt="Delete" class="btn-delete">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <!-- l -->
+    <div class="user" id="user">
+        <div class="user-content">
+            <span class="close">&times;</span>
+            <div id="userBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

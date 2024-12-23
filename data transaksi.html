@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Barang - PT DRM Elektronik</title>
+    <link rel="stylesheet" href="data transaksi.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="assets/images/logo-home.png" alt=" Inventory icon">
+            <h1>PT. DRM ELEKTRONIK</h1>
+        </div>
+        <nav class="nav-menu">
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="logout-text" id="logoutText">Logout</div>
+        </nav>
+    </header>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>Inventory System</h2>
+        <ul class="menu">
+            <li>
+                <a href="dashboard.html">
+                    <img src="assets/images/icon-dashboard.png" alt="Dashboard Icon"> Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="data user.html">
+                    <img src="assets/images/data-user.png" alt="User Icon"> Data User
+                </a>
+            </li>
+            <li >
+                <a href="data customer.html">
+                    <img src="assets/images/icon-customer.png" alt="Customer Icon"> Data Customer
+                </a>
+            </li>
+            <li class="active">
+                <a href="data transaksi.html">
+                    <img src="assets/images/icon-transaksi.png" alt="Transaction Icon"> Transaksi
+                </a>
+            </li>
+            <li >
+                <a href="data barang.html">
+                    <img src="assets/images/icon-barang.png" alt="Product Icon"> Data Barang
+                </a>
+            </li>
+            <li>
+                <a href="laporan akhir.html">
+                    <img src="assets/images/icon-laporan.png" alt="Report Icon"> Laporan Akhir
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+        <h1>Transaksi Penjualan</h1>
+
+        <button id="btnAdd" class="btn">Tambah</button>
+        <div class="table-controls">
+            <select id="rowSelect">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+            <div class="search-box">
+                <label for="searchInput">Search:</label>
+                <input type="text" id="searchInput" placeholder="Search...">
+            </div>
+        </div>
+        <!-- Tabel Pertama -->
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>ID Penjualan</th>
+                    <th>Nama Barang</th>
+                    <th>Kode Barang</th>
+                    <th>ID Customer</th>
+                    <th>Jumlah</th>
+                    <th>Total Harga (Rp)</th>
+                    <th>Tanggal Jual</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="transaksitableBody">
+                <tr>
+                    <td>1</td>
+                    <td>J101</td>
+                    <td>Smartphone XYZ</td>
+                    <td>101</td>
+                    <td>C001</td>
+                    <td>1</td>
+                    <td>2,500,000</td>
+                    <td>2024-12-23</td>
+                    <td>
+                        <img src="assets/images/logo-edit.jpg" alt="Edit" class="btn-edit">
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>J102</td>
+                    <td>Smartwatch A1</td>
+                    <td>102</td>
+                    <td>C002</td>
+                    <td>2</td>
+                    <td>2,000,000</td>
+                    <td>2024-12-22</td>
+                    <td>
+                        <img src="assets/images/logo-edit.jpg" alt="Edit" class="btn-edit">
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>J103</td>
+                    <td>Wireless Headphones</td>
+                    <td>103</td>
+                    <td>C003</td>
+                    <td>3</td>
+                    <td>1,050,000</td>
+                    <td>2024-12-21</td>
+                    <td>
+                        <img src="assets/images/logo-edit.jpg" alt="Edit" class="btn-edit">
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>J104</td>
+                    <td>Laptop ABC</td>
+                    <td>104</td>
+                    <td>C004</td>
+                    <td>1</td>
+                    <td>7,000,000</td>
+                    <td>2024-12-20</td>
+                    <td>
+                        <img src="assets/images/logo-edit.jpg" alt="Edit" class="btn-edit">
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>J105</td>
+                    <td>4K LED TV</td>
+                    <td>105</td>
+                    <td>C005</td>
+                    <td>1</td>
+                    <td>5,000,000</td>
+                    <td>2024-12-19</td>
+                    <td>
+                        <img src="assets/images/logo-edit.jpg" alt="Edit" class="btn-edit">
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>J106</td>
+                    <td>Bluetooth Speaker</td>
+                    <td>106</td>
+                    <td>C006</td>
+                    <td>4</td>
+                    <td>1,800,000</td>
+                    <td>2024-12-18</td>
+                    <td>
+                        <img src="assets/images/logo-edit.jpg" alt="Edit" class="btn-edit">
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>J107</td>
+                    <td>Action Camera X200</td>
+                    <td>107</td>
+                    <td>C007</td>
+                    <td>1</td>
+                    <td>1,200,000</td>
+                    <td>2024-12-17</td>
+                    <td>
+                        <img src="assets/images/logo-edit.jpg" alt="Edit" class="btn-edit">
+                    </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>J108</td>
+                    <td>Digital Camera EOS</td>
+                    <td>108</td>
+                    <td>C008</td>
+                    <td>1</td>
+                    <td>3,500,000</td>
+                    <td>2024-12-16</td>
+                    <td>
+                        <img src="assets/images/logo-edit.jpg" alt="Edit" class="btn-edit">
+                    </td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>J109</td>
+                    <td>Gaming Console ZX</td>
+                    <td>109</td>
+                    <td>C009</td>
+                    <td>1</td>
+                    <td>4,500,000</td>
+                    <td>2024-12-15</td>
+                    <td>
+                        <img src="assets/images/logo-edit.jpg" alt="Edit" class="btn-edit">
+                    </td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>J110</td>
+                    <td>Portable Air Conditioner</td>
+                    <td>110</td>
+                    <td>C010</td>
+                    <td>2</td>
+                    <td>4,000,000</td>
+                    <td>2024-12-14</td>
+                    <td>
+                        <img src="assets/images/logo-edit.jpg" alt="Edit" class="btn-edit">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Tabel Kedua -->
+        <h5>Transaksi Pembelian</h5>
+
+        <button id="addBtn" class="btn">Tambah</button>
+        <div class="table-controls">
+            <select id="rowSelect">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+            <div class="search-box">
+                <label for="searchInput">Search:</label>
+                <input type="text" id="searchInput" placeholder="Search...">
+            </div>
+        </div>
+        <div class="table">
+            <div class="table-header">
+                <div class="table-row">
+                    <div class="table-cell">No.</div>
+                    <div class="table-cell">ID Pembelian</div>
+                    <div class="table-cell">Nama Barang</div>
+                    <div class="table-cell">Kode Barang</div>
+                    <div class="table-cell">Jumlah</div>
+                    <div class="table-cell">Harga Satuan (Rp)</div>
+                    <div class="table-cell">Total Harga (Rp)</div>
+                    <div class="table-cell">Tanggal Beli</div>
+                    <div class="table-cell">Aksi</div>
+                </div>
+            </div>
+            <div class="table-body" id="pembeliantableBody">
+                <div class="table-row">
+                    <div class="table-cell">1</div>
+                    <div class="table-cell">P101</div>
+                    <div class="table-cell">Smartphone XYZ</div>
+                    <div class="table-cell">101</div>
+                    <div class="table-cell">2</div>
+                    <div class="table-cell">2,500,000</div>
+                    <div class="table-cell">5,000,000</div>
+                    <div class="table-cell">2024-12-23</div>
+                    <div class="table-cell">
+                        <img src="assets/images/logo-edit.jpg" alt="Edit" class="edit-btn">
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">2</div>
+                    <div class="table-cell">P102</div>
+                    <div class="table-cell">Smartwatch A1</div>
+                    <div class="table-cell">102</div>
+                    <div class="table-cell">3</div>
+                    <div class="table-cell">1,000,000</div>
+                    <div class="table-cell">3,000,000</div>
+                    <div class="table-cell">2024-12-22</div>
+                    <div class="table-cell">
+                        <img src="assets/images/logo-edit.jpg" alt="Edit" class="edit-btn">
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">3</div>
+                    <div class="table-cell">P103</div>
+                    <div class="table-cell">Wireless Headphones</div>
+                    <div class="table-cell">103</div>
+                    <div class="table-cell">5</div>
+                    <div class="table-cell">350,000</div>
+                    <div class="table-cell">1,750,000</div>
+                    <div class="table-cell">2024-12-21</div>
+                    <div class="table-cell">
+                        <img src="assets/images/logo-edit.jpg" alt="Edit" class="edit-btn">
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">4</div>
+                    <div class="table-cell">P104</div>
+                    <div class="table-cell">Laptop ABC</div>
+                    <div class="table-cell">104</div>
+                    <div class="table-cell">1</div>
+                    <div class="table-cell">7,000,000</div>
+                    <div class="table-cell">7,000,000</div>
+                    <div class="table-cell">2024-12-20</div>
+                    <div class="table-cell">
+                        <img src="assets/images/logo-edit.jpg" alt="Edit" class="edit-btn">
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">5</div>
+                    <div class="table-cell">P105</div>
+                    <div class="table-cell">4K LED TV</div>
+                    <div class="table-cell">105</div>
+                    <div class="table-cell">2</div>
+                    <div class="table-cell">5,000,000</div>
+                    <div class="table-cell">10,000,000</div>
+                    <div class="table-cell">2024-12-19</div>
+                    <div class="table-cell">
+                        <img src="assets/images/logo-edit.jpg" alt="Edit" class="edit-btn">
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">6</div>
+                    <div class="table-cell">P106</div>
+                    <div class="table-cell">Bluetooth Speaker</div>
+                    <div class="table-cell">106</div>
+                    <div class="table-cell">10</div>
+                    <div class="table-cell">450,000</div>
+                    <div class="table-cell">4,500,000</div>
+                    <div class="table-cell">2024-12-18</div>
+                    <div class="table-cell">
+                        <img src="assets/images/logo-edit.jpg" alt="Edit" class="edit-btn">
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">7</div>
+                    <div class="table-cell">P107</div>
+                    <div class="table-cell">Action Camera X200</div>
+                    <div class="table-cell">107</div>
+                    <div class="table-cell">4</div>
+                    <div class="table-cell">1,200,000</div>
+                    <div class="table-cell">4,800,000</div>
+                    <div class="table-cell">2024-12-17</div>
+                    <div class="table-cell">
+                        <img src="assets/images/logo-edit.jpg" alt="Edit" class="edit-btn">
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">8</div>
+                    <div class="table-cell">P108</div>
+                    <div class="table-cell">Digital Camera EOS</div>
+                    <div class="table-cell">108</div>
+                    <div class="table-cell">1</div>
+                    <div class="table-cell">3,500,000</div>
+                    <div class="table-cell">3,500,000</div>
+                    <div class="table-cell">2024-12-16</div>
+                    <div class="table-cell">
+                        <img src="assets/images/logo-edit.jpg" alt="Edit" class="edit-btn">
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">9</div>
+                    <div class="table-cell">P109</div>
+                    <div class="table-cell">Gaming Console ZX</div>
+                    <div class="table-cell">109</div>
+                    <div class="table-cell">2</div>
+                    <div class="table-cell">4,500,000</div>
+                    <div class="table-cell">9,000,000</div>
+                    <div class="table-cell">2024-12-15</div>
+                    <div class="table-cell">
+                        <img src="assets/images/logo-edit.jpg" alt="Edit" class="edit-btn">
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">10</div>
+                    <div class="table-cell">P110</div>
+                    <div class="table-cell">Portable Air Conditioner</div>
+                    <div class="table-cell">110</div>
+                    <div class="table-cell">3</div>
+                    <div class="table-cell">2,000,000</div>
+                    <div class="table-cell">6,000,000</div>
+                    <div class="table-cell">2024-12-14</div>
+                    <div class="table-cell">
+                        <img src="assets/images/logo-edit.jpg" alt="Edit" class="edit-btn">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <!-- l -->
+    <div class="transaksi" id="transaksi">
+        <div class="transaksi-content">
+            <span class="close">&times;</span>
+            <div id="transaksiBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

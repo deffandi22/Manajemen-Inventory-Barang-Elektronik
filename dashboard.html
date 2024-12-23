@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - PT DRM Elektronik</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="assets/images/logo-home.png" alt=" Inventory icon">
+            <h1>PT. DRM ELEKTRONIK</h1>
+        </div>
+        <nav class="nav-menu">
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="logout-text" id="logoutText">Logout</div>
+        </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>Inventory System</h2>
+        <ul class="menu">
+            <li class="active">
+                <a href="#">
+                    <img src="assets/images/icon-dashboard.png" alt="Dashboard Icon"> Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="data user.html">
+                    <img src="assets/images/data-user.png" alt="User Icon"> Data User
+                </a>
+            </li>
+            <li>
+                <a href="data customer.html">
+                    <img src="assets/images/icon-customer.png" alt="Customer Icon"> Data Customer
+                </a>
+            </li>
+            <li>
+                <a href="data transaksi.css">
+                    <img src="assets/images/icon-transaksi.png" alt="Transaction Icon"> Transaksi
+                </a>
+            </li>
+            <li>
+                <a href="data barang.html">
+                    <img src="assets/images/icon-barang.png" alt="Product Icon"> Data Barang
+                </a>
+            </li>
+            <li>
+                <a href="laporan akhir.html">
+                    <img src="assets/images/icon-laporan.png" alt="Report Icon"> Laporan Akhir
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+        <!-- Info Cards -->
+        <div class="info-cards">
+            <div class="card blue">Total Users<br><span>6</span></div>
+            <div class="card green">Total Customers<br><span>300</span></div>
+            <div class="card yellow">Stok Tersedia<br><span>4790</span></div>
+            <div class="card red">Total Penjualan<br><span>11980</span></div>
+            <div class="card gray">Total Pembelian<br><span>15690</span></div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="charts">
+            <div class="chart">
+                <h3>Analitik Penjualan dan Pembelian</h3>
+                <img src="assets/images/chart-transaksi.png" alt="Chart Penjualan">
+            </div>
+            <div class="chart">
+                <h3>Analitik Stok Barang</h3>
+                <img src="assets/images/chart-barang.png" alt="Chart Stok">
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
